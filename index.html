@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0b">
+<title>OpenLanguage — learn any language through songs you love</title>
+<meta name="description" content="OpenLanguage is a free Dawn platform to learn any language through songs: pick one song you love, split it line by line, loop one line until you can sing it. Real human voices, never robots.">
+<meta property="og:title" content="OpenLanguage — learn any language through songs you love">
+<meta property="og:description" content="OpenLanguage is a free Dawn platform to learn any language through songs: pick one song you love, split it line by line, loop one line until you can sing it. Real human voices, never robots.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://openlanguage.dawnstudio.app/">
+<meta property="og:site_name" content="OpenLanguage">
+<meta property="og:image" content="https://openlanguage.dawnstudio.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OpenLanguage — Dawn Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenLanguage — learn any language through songs you love">
+<meta name="twitter:description" content="OpenLanguage is a free Dawn platform to learn any language through songs: pick one song you love, split it line by line, loop one line until you can sing it. Real human voices, never robots.">
+<meta name="twitter:image" content="https://openlanguage.dawnstudio.app/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0b;--surface:#141416;--surface2:#1c1c1f;--text:#f5f2ea;--muted:#a7a29a;--border:#2a2a2e;--accent:#f5c86b;--accent-ink:#1a1405}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px;width:100%;min-width:0}
+header.site{position:sticky;top:0;z-index:10;background:rgba(10,10,11,.92);border-bottom:1px solid var(--border)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none;color:var(--text)}
+.brand img{width:30px;height:30px;border-radius:22%;flex:none}
+.brand span{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.headlinks{display:flex;align-items:center;gap:10px;flex:none}
+.headlinks a{color:var(--muted);text-decoration:none;font-size:14px}
+.headlinks a:hover{color:var(--text)}
+.langbtn{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:14px;cursor:pointer;max-width:100%}
+.hero{padding:72px 0 48px;text-align:left}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin-bottom:16px}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.15;font-weight:800;overflow-wrap:break-word}
+.hero p.lede{margin-top:20px;font-size:clamp(16px,2.6vw,20px);color:var(--muted);max-width:640px;overflow-wrap:break-word}
+.status{display:inline-block;margin-top:26px;background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-size:14px;max-width:100%;overflow-wrap:break-word}
+.status b{color:var(--accent)}
+section{padding:34px 0;border-top:1px solid var(--border)}
+h2{font-size:24px;margin-bottom:14px}
+section p,section li{color:var(--muted);overflow-wrap:break-word}
+section p+p{margin-top:12px}
+ul,ol{padding-left:22px}
+li{margin:8px 0}
+li b,section p b{color:var(--text)}
+.cards{display:grid;grid-template-columns:1fr;gap:12px;margin-top:6px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;min-width:0}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p{font-size:15px}
+.card a{color:var(--accent);text-decoration:none;font-weight:600}
+blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:14px 0;color:var(--text);font-size:17px;overflow-wrap:break-word}
+footer.site{border-top:1px solid var(--border);padding:30px 0 44px;margin-top:20px}
+footer.site .wrap{display:flex;flex-direction:column;gap:8px}
+footer.site a{color:var(--muted);text-decoration:none}
+footer.site a:hover{color:var(--text)}
+.footbrand{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:600}
+.footbrand img{width:22px;height:22px;border-radius:22%}
+.small{font-size:13px;color:var(--muted)}
+[data-lang="zh"]{display:none}
+html[lang="zh-Hant"] [data-lang="zh"]{display:block}
+html[lang="zh-Hant"] [data-lang="en"]{display:none}
+html[lang="zh-Hant"] span[data-lang="zh"]{display:inline}
+html[lang="zh-Hant"] span[data-lang="en"]{display:none}
+span[data-lang="zh"]{display:none}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="/"><img src="/favicon-32.png" alt="OpenLanguage logo"><span>OpenLanguage</span></a>
+<div class="headlinks"><a href="https://dawnstudio.app/">Dawn Studio</a><button class="langbtn" onclick="setLang(document.documentElement.lang==='zh-Hant'?'en':'zh')">繁中</button></div>
+</div></header>
+<main class="wrap">
+<div class="hero">
+<div class="kicker">Dawn Studio</div>
+<h1><span data-lang="en">Learn any language through songs you love</span><span data-lang="zh">透過你鍾意嘅歌，學任何語言</span></h1>
+<p class="lede"><span data-lang="en">Pick one song you love. Split it line by line. Loop one line until it is yours — sung to you by the real artist, never a robot voice.</span><span data-lang="zh">揀一首你鍾意嘅歌，逐行拆開，一行 loop 到入心為止 — 唱俾你聽嘅係原唱真人，唔係機械人聲。</span></p>
+<div class="status"><span data-lang="en">STATUS — <b>Founding — founded 2026-11-19 · grill complete · first release in build</b></span><span data-lang="zh">狀態 — <b>創建中 — 2026-11-19 創立 · 設計拷問已完成 · 第一版開發中</b></span></div>
+</div>
+<section><h2><span data-lang="en">What it is</span><span data-lang="zh">呢個係咩</span></h2>
+<div data-lang="en"><p>OpenLanguage was not brainstormed — it was <b>lived first</b>. On the all-nighter of 2026-11-19, its founder looped one Japanese song he loved in OpenMusic — ロストライン (茉ひる · Billy Choi) — using lyric repeat and the ±0.5s lyrics timer to hear a single line head-to-tail, over and over. In about <b>10 minutes</b>, one line went from unreadable to singable, including three kanji readings he had never known. His verdict: real, loved material beats simple circling tasks — one song, one line at a time.</p>
+<p>The core loop: search a song through OpenMusic, split it <b>line by line</b>, tap any word for its reading and meaning, hear the same sound across many voices and versions, and sing the line back. Scaffolding (romaji, furigana) <b>fades automatically</b> as recall becomes real. A science-based memory engine (FSRS-class, per item) reheats each line just before it would be forgotten — reheat, don't re-cook.</p>
+<p>And the gate is your voice: in the <b>Dictation Gate</b> (2026-11-21), the learner always answers by voice, and passing means a native-grade dictation engine can transcribe you correctly, again and again. Fail = drill again, privately, infinitely patient. Pass = recorded, celebrated, next level.</p></div><div data-lang="zh"><p>OpenLanguage 唔係坐喺度諗出嚟 — 係<b>先活過，先成立</b>。2026-11-19 通宵嗰晚，創辦人喺 OpenMusic loop 一首一聽鍾情嘅日文歌 — ロストライン（茉ひる · Billy Choi）— 用歌詞重播同 ±0.5 秒歌詞計時，將一行歌詞由頭到尾聽完又聽。大約 <b>10 分鐘</b>，一行由睇唔明變到唱得出，包括三個從未識嘅漢字讀音。佢嘅判語：真材實料、自己鍾意嘅歌，勝過原地打圈嘅簡單任務 — 一首歌，一行一行嚟。</p>
+<p>核心循環：透過 OpenMusic 搵歌，<b>逐行</b>拆開，撳任何一隻字睇讀音同意思，同一個音聽勻多把聲、多個版本，再唱返出嚟。輔助（羅馬字、振假名）會隨住真識咗而<b>自動淡出</b>。科學記憶引擎（FSRS 級、逐項排程）喺你就嚟唔記得之前翻熱嗰行 — 翻熱，唔係重新煮。</p>
+<p>而把關嘅係你把聲：<b>聽寫閘</b>（Dictation Gate，2026-11-21）— 學員永遠用聲答，過關 = 原生級聽寫引擎可以穩定正確咁寫出你講嘅嘢。唔過 = 私下再練，無限耐性；過咗 = 記錄、慶祝、下一關。</p></div></section>
+<section><h2><span data-lang="en">END GOAL</span><span data-lang="zh">最終目標</span></h2>
+<div data-lang="en"><p><b>Sight → sound, as a reflex.</b> See a character, and the sound fires — physiologically, with no intermediate step, like a native. The sole purpose recorded at founding: <b>teach more people more foreign languages — not their mother tongue — through songs they chose themselves.</b> The ceiling is not one language pair: it is every language on Earth.</p></div><div data-lang="zh"><p><b>見字 → 出聲，成為反射。</b>見到一隻字，個音即刻彈出嚟 — 生理級、冇中間步，好似母語者一樣。創立時記錄嘅唯一目的：<b>透過學習者自己揀嘅歌，教更多人學更多外語（唔係母語）。</b>天花板唔係一對語言 — 係地球上所有語言。</p></div></section>
+<section><h2><span data-lang="en">ROADMAP</span><span data-lang="zh">路線圖</span></h2>
+<div data-lang="en"><ol>
+<li><b>Japanese first, deeply</b> — architecture language-generic from day one; content and dogfooding launch with Japanese (hiragana + katakana to mother-tongue ease, per-kana diagnosis).</li>
+<li><b>The core loop</b> — OpenMusic search → line-by-line split → tap-a-word readings → contrast listening across voices → sing-back, with the microphone in from day one.</li>
+<li><b>The memory engine</b> — FSRS-class per-item scheduling; idol-voiced forced-recall reviews at the forgetting edge.</li>
+<li><b>The Dictation Gate</b> — voice answers certified by render stability across repetitions.</li>
+<li><b>Every language on Earth</b> — any source → target pair, self-selected songs, era-spanning voices.</li>
+</ol></div><div data-lang="zh"><ol>
+<li><b>日文先行，做深</b> — 架構第一日就語言通用；內容同 dogfood 先由日文出發（平假名＋片假名去到母語級流暢，逐個假名診斷）。</li>
+<li><b>核心循環</b> — OpenMusic 搵歌 → 逐行拆 → 撳字睇讀音 → 多把聲對比聆聽 → 唱返出嚟，咪高峰第一日就有。</li>
+<li><b>記憶引擎</b> — FSRS 級逐項排程；喺遺忘邊緣用原唱把聲做強制回憶複習。</li>
+<li><b>聽寫閘</b> — 用聲作答，以重複渲染穩定度認證過關。</li>
+<li><b>地球上所有語言</b> — 任意來源 → 目標語言配對、自選歌曲、跨年代聲音。</li>
+</ol></div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="footbrand"><img src="/favicon-32.png" alt=""> OpenLanguage</div>
+<div class="small"><span data-lang="en">Founded 2026-11-19 · A Dawn Studio product · Family: OpenMusic + OpenTeacher (OpenSchool)</span><span data-lang="zh">2026-11-19 創立 · Dawn Studio 產品 · 家族：OpenMusic + OpenTeacher（OpenSchool）</span></div>
+<div class="small"><a href="https://dawnstudio.app/">dawnstudio.app</a> · <a href="https://openschool.dawnstudio.app/">OpenSchool</a> · <a href="https://openteacher.dawnstudio.app/">OpenTeacher</a> · <a href="https://openmusic.dawnstudio.app/">OpenMusic</a></div>
+<div class="small">© 2026 Dawn Studio · No trackers on this page.</div>
+</div></footer>
+<script>
+function setLang(l){document.documentElement.lang=(l==='zh'?'zh-Hant':'en');try{localStorage.setItem('lang',l)}catch(e){}document.querySelectorAll('.langbtn').forEach(b=>b.textContent=(l==='zh'?'EN':'繁中'));}
+(function(){var l='en';try{l=localStorage.getItem('lang')||((navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en')}catch(e){}setLang(l);})();
+</script>
+</body>
+</html>
